@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;box-sizing: border-box;
+        }
+        body{
+            background-color: #1b76f2;
+        }
+        .container{
+            background-color: #1a1820;
+            width:400px;
+            width:400px;
+            /* width: min(37.5em,0%); */
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            padding: 3em;
+            border-radius:0.5em;
+
+        }
+        h1{
+            text-align: center;
+            font-weight: 500;
+            color:#ffffff;
+        }
+        button{
+            /* background-color: #1b76f2; */
+            background-color:green;
+
+            display: block;
+            margin: 2em auto;
+            padding: 1em;
+            color:#ffffff;
+            border:none;
+            outline: none;
+            border-radius: 0.3em;
+        }
+        #otpDisplay{
+            font-size: 1em;
+            /* background-color: #2a292e; */
+            background-color: red;
+
+            color: #ffffff;
+            letter-spacing: 1em;
+            text-align: center;
+            padding: 1em 0;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OTP Generator</h1>
+        <button id="generatebtn">Generate OTP</button>
+        <p id="otpDisplay"></p>
+    </div>
+</body>
+<script>
+    let generateOTP =() =>{
+        // Define the length of otp
+        const otplength=6;
+        // Generate a random Number OTP
+        const otp=Math.floor(Math.random().math.power(10,otplength));
+        // Display the otp generate
+        document.getElementById("otpDisplay").innerText=`${otp}`;
+
+    };
+    document.getElementById("generatebtn");
+    addEventListener("click",generateOTP);
+    window.addEventListener("load,generateOTP");
+</script>
+</html>
